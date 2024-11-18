@@ -1,0 +1,325 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('Library.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* Encapsulated styles for the ring */
+.ring-container {
+  position: relative; /* Positioning context for the ring */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width to center the ring */
+  height: 100%; /* Full height to center the ring */
+}
+
+.ring {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Set a lower z-index for the ring */
+}
+
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+
+.ring i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+
+.ring i:nth-child(2) {
+  border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+
+.ring i:nth-child(3) {
+  border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+
+.ring:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+/* Add z-index to the main and wrapper classes */
+.main, .wrapper {
+  position: relative; /* Ensure they are positioned */
+  z-index: 5; /* Set a lower z-index for the login containers */
+}
+
+/* Existing styles for the ring */
+.ring {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Set a lower z-index for the ring */
+}
+
+.ring {
+  position: absolute; /* Keep it absolute for overlapping */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  width: 1100px; /* Increase the width */
+  height: 1100px; /* Increase the height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Lower z-index for the ring */
+}
+
+/* Add hover effect for the ring */
+.ring:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Adjust the main container */
+.main {
+  position: relative; /* Ensure it has a stacking context */
+  z-index: 5; /* Lower z-index than the ring */
+}
+
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.main {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+}
+label {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #fffbfb; 
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #f8f5f5;
+  border-radius: 5px;
+  background-color: #f9f6f6;
+  color: #0e0d0d; 
+}
+
+button {
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  color: #f5f2f5;
+  cursor: pointer;
+  background-color: #666;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.wrapper {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+}
+.forgot-password {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #4CAF50;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  color: #4CAF50;
+  text-decoration: underline;
+}
+.social-login {
+  margin-top: 20px;
+}
+
+.google.btn {
+  background-color: #dd4b39;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google.btn:hover {
+  background-color: #c23321;
+}
+
+.facebook.btn {
+  background-color: #3b5998;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.facebook.btn:hover {
+  background-color: #2f477a;
+}
+
+.create-account {
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.create-account:hover {
+  color: #4CAF50;
+  text-decoration: underline;
+}
+
+.not-registered {
+  color: #ffffff; 
+  font-weight: bold;
+}
+.main h3 {
+  text-align: center;
+}
+.input-container {
+  position: relative; 
+  margin-bottom: 15px; 
+}
+
+.input-container input {
+  width: 100%; 
+  padding-right: 30px; 
+}
+
+.icon {
+  position: absolute; 
+  right: 10px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  color: #555; 
+}
+.social-login {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-top: 20px; 
+}
+
+.google.btn, .facebook.btn {
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  color: white; 
+  width: 200px;
+}
+
+.google.btn {
+  background-color: #f50808;
+}
+
+.facebook.btn {
+  background-color: #3b5998; 
+}
+.parent-container {
+  display: flex;               
+  align-items: center;       
+}
+
+.container {
+  margin-right: 10px;         
+}
+.forgot-password-link {
+  color: #d2aaaa;
+}
+.create-account link {
+  color: #bb9292;
+}
+.Login.link{
+  color: #faf4f4;
+}
+.BacktoLogin{
+  color: #c99d9d;
+}
+body {
+  background-image: url("Library.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.form {
+  display: none;
+}
+.checkbox-container {
+  display: flex;              
+  align-items: center;        
+}
+.checkbox-container input[type="checkbox"] {
+  margin-right: 5px;          
+}
+.remember-label {
+  font-weight: bold;  
+  color: #ffffff;        
+}

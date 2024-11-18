@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page of Livery</title>
+    <link rel="stylesheet" href="LoginPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="ring">
+        <i style="--clr:#00ff0a;"></i>
+        <i style="--clr:#ff0057;"></i>
+        <i style="--clr:#fffd44;"></i>
+    </div>  
+    <div class="main">
+        <h1>Welcome to Livery</h1>
+        <h3>Enter your login credentials</h3>
+       
+        <div id="login-form" class="form" style="display: block;">
+            <form action="LoginPage.php" method="POST">
+            <div class="input-container">
+                <input type="text" id="first" name="first" placeholder="Enter your Email" required>
+                <i class="fas fa-user icon"></i>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+                <i class="fas fa-lock icon"></i>
+            </div>
+            <a href="#" style="text-decoration: none;" class="forgot-password-link" onclick="showForgotPassword()">Forgot Password?</a>
+            <div class="parent-container">
+                <div class="container">
+                    <h4 id="myHeading">Remember Me</h4>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="checker" name="checker">
+                    <label for="checker" class="remember-label"></label>
+                </div>
+            </div>
+            <div class="wrap">
+                <button type="button" onclick="solve()">Sign In</button>
+            </div>
+        
+            <p>Not registered? <a href="#" style="text-decoration: none;" class="create-account link" onclick="showSignUp()">Create an account</a></p>
+            <div class="social-login">
+                <button id="google-buttonlogin" class="google btn">
+                    <i class="fab fa-google fa-fw"></i> Sign in Google
+                </button>
+                <button id="facebook-buttonlogin" class="facebook btn">
+                    <i class="fab fa-facebook fa-fw"></i> Sign in Facebook
+                </button>
+            </div>
+        </form>
+        </div>
+    
+        <div id="sign-up-form" class="form">
+            <h3>Create an Account</h3>
+            <form action="SignUpPage.php" method="POST">
+            <div class="input-container">
+                <input type="text" id="new-email" name="new-email" placeholder="Enter your Email" required>
+            </div>
+            <div class="input-container">
+                <input type="password" id="new-password" name="new-password" placeholder="Create a Password" required>
+            </div>
+            <input type="password" id="confirm-password" placeholder="Confirm your password" name="psw-repeat" required>
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            <div class="wrap">
+                <button type="button" onclick="signUp()">Sign Up</button>
+            </div>
+        </form>
+            <p>Already have an account? <a href="#" style="text-decoration: none;" class="Login link"onclick="showLogin()">Login</a></p>
+        </div>
+        <div id="forgot-password-form" class="form">
+            <h3>Forgot Password</h3>
+            <div class="input-container">
+                <input type="text" id="forgot-email" name="forgot-email" placeholder="Enter your Email" required>
+            </div>
+            <div class="wrap">
+                <button type="button" onclick="resetPassword()">Reset Password</button>
+            </div>
+            <p><a href="#" class= "BacktoLogin"onclick="showLogin()">Back to Login</a></p>
+        </div>
+    </div>
+   
+    <script src="LoginPage.js" type="module"></script>
+    <script src="LoginPages.js"></script>
+</body>
+</html>

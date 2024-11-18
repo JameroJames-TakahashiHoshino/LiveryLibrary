@@ -1,0 +1,162 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3C91E6;
+    color: #fff;
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+}
+
+.notification-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-icon i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.dropdown-notif {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.dropdown-notif.show {
+    display: block;
+}
+
+.dropdown-notif ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-notif li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-notif li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-notif li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.dropdown-notif li a:hover {
+    background-color: #f0f0f0;
+}
+
+.notif-icon {
+    margin-right: 10px;
+}
+
+.notif-icon i {
+    font-size: 24px;
+    color: #3C91E6;
+}
+
+.notif-content {
+    flex-grow: 1;
+}
+
+.notif-message {
+    margin: 0;
+    font-size: 14px;
+}
+
+.notif-time {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+}
+
+.spacer {
+    width: 20px;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+}

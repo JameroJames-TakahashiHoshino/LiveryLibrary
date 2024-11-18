@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="Notification.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <a href="#" class="header__logo">Library</a>
+            <div class="header__actions">
+                <div class="notification-icon dropdown">
+                    <i class="ri-notification-2-line" id="notif-toggle"></i>
+                    <div class="dropdown-notif" id="notif-menu">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="notif-icon">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <div class="notif-content">
+                                        <p class="notif-message">You have a new message from John Doe</p>
+                                        <p class="notif-time">5 minutes ago</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="notif-icon">
+                                        <i class="ri-calendar-event-line"></i>
+                                    </div>
+                                    <div class="notif-content">
+                                        <p class="notif-message">Your event "Library Meetup" is starting soon</p>
+                                        <p class="notif-time">30 minutes ago</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="notif-icon">
+                                        <i class="ri-bookmark-line"></i>
+                                    </div>
+                                    <div class="notif-content">
+                                        <p class="notif-message">New book "JavaScript Essentials" added to your collection</p>
+                                        <p class="notif-time">1 hour ago</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="notif-icon">
+                                        <i class="ri-user-add-line"></i>
+                                    </div>
+                                    <div class="notif-content">
+                                        <p class="notif-message">New user "Jane Smith" has joined your group</p>
+                                        <p class="notif-time">2 hours ago</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="dropdown">
+                    <i class="ri-account-circle-line" id="dropdown-toggle"></i>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <ul>
+                            <li><a href="Profile.html">Profile</a></li>
+                            <li><a href="Settings.html">Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        document.getElementById('notif-toggle').addEventListener('click', function() {
+            document.getElementById('notif-menu').classList.toggle('show');
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!event.target.matches('#notif-toggle')) {
+                var dropdowns = document.getElementsByClassName('dropdown-notif');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

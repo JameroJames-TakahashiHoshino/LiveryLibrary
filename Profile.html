@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Profile.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js" crossorigin="anonymous"></script>
+    <title>User Profile</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left" id="profile-view">
+            <img class="profile-image"  id="profile-image" alt="user" width="100"> 
+            <h4>User</h4>
+            <p>Student</p>
+            <input type="file" id="profile-image-input" accept="image/*">
+            <button class="edit-profile-button" id="edit-profile-button">Edit Profile</button>
+        </div>
+        <div class="right" id="profile-view">
+            <div class="info">
+                <h3>Information</h3>
+                <div class="info_data">
+                    <div class="data">
+                        <h4>Email</h4>
+                        <p>User@gmail.com</p>
+                    </div>
+                    <div class="data">
+                        <h4>Phone</h4>
+                        <p>0001-213-998761</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects">
+                <h3>Interaction</h3>
+                <div class="projects_data">
+                    <div class="data">
+                        <h4>Recently read books</h4>
+                        <p>Game of Thrones</p>
+                    </div>
+                    <div class="data">
+                        <h4>Currently reading</h4>
+                        <p>Harry Potter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper" id="edit-profile-view" style="display: none;">
+        <div class="left">
+            <h4>Edit Profile</h4>
+            <form id="edit-profile-form">
+                <label for="edit-name">Name:</label>
+                <input type="text" id="edit-name" name="edit-name" value="User">
+                <label for="edit-email">Email:</label>
+                <input type="email" id="edit-email" name="edit-email" value="User@gmail.com">
+                <label for="edit-phone">Phone:</label>
+                <input type="text" id="edit-phone" name="edit-phone" value="0001-213-998761">
+                <label for="edit-recently-read">Recently read books:</label>
+                <input type="text" id="edit-recently-read" name="edit-recently-read" value="Game of Thrones">
+                <label for="edit-currently-reading">Currently reading:</label>
+                <input type="text" id="edit-currently-reading" name="edit-currently-reading" value="Harry Potter">
+                <button type="submit" class="save-profile-button">Save</button>
+                <button type="button" class="cancel-edit-button" id="cancel-edit-button">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="Profile.js"></script>
+</body>
+</html>
