@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Book Entries</title>
+    <link rel="stylesheet" href="Book Returning.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Book Returning Form</header>
+      <form action="Book Returning.php" method="POST" class="form">
+        <div class="input-box">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter full name" required />
+        </div>
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="text" placeholder="Enter email address" required />
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Book that you will return</label>
+            <input type="text" placeholder="Enter Book Title" required />
+          </div>
+          <div class="input-box">
+            <label>Date for Returning</label>
+            <input type="date" placeholder="Enter Return date" required />
+          </div>
+        </div>
+        <div class="gender-box">
+          <h3>Did you enjoy the Book that you Borrowed?</h3>
+          <div class="Return-option">
+            <div class="Return">
+              <input type="radio" id="check-yes" name="return" checked />
+              <label for="check-yes">Yes</label>
+            </div>
+            <div class="Return">
+              <input type="radio" id="check-no" name="return" />
+              <label for="check-no">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Details of the Book that you will return</label>
+          <input type="text" placeholder="Enter the Full Name of the Author" required />
+          <input type="text" placeholder="Enter the Genre or Category" required />
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>Current book status</option>
+                <option>Still Kept</option>
+                <option>I lost it</option>               
+              </select>
+            </div>
+              <div class="select-box">
+                <select>
+                  <option hidden>Current book condition</option>
+                  <option>Damaged</option>
+                  <option>Still Good</option>               
+                </select>
+              </div>
+          </div>
+          <div class="Anothercolumn">
+            <input type="text" placeholder="Branch of library where you borrowed it" required />
+            <input type="number" placeholder="Enter ISBN" required />
+          </div>
+
+        <div class="input-box">
+            <label>Return Receipt Number</label>
+            <input type="number" placeholder="Enter Receipt Number" required />
+          </div>
+           <div class="input-box">
+            <label>Condition Report</label>
+            <textarea placeholder="Describe the condition of the book upon return" required></textarea>
+          </div>        
+          <div class="input-box">
+            <label>Fines and Fees</label>
+            <input type="number" placeholder="Enter any fines incurred (if applicable)" />
+          </div>
+  
+          <div class="form-group">
+            <div class="form-buttons">
+                <button type="Submits" class="btn" onclick="openPopUp()">Submit</button>
+                <div class="popeye" id="popeye">
+                    <img src="404-tick.png">
+                    <h2>congratulations!</h2>
+                    <p>Thank You! You have officially returned the books</p>
+                    <button type="button" onclick="closePopUp()">Ok</button>
+                  </div>
+                  <button type="button" onclick="window.location.href='Dashboard.html'">Cancel</button>
+              </div>
+            </div>
+        </form>
+      </section>
+<script src="ReturningBooks.js"> </script>
+    </body>
+  </html>

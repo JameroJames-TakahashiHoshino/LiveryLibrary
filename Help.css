@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #342525;
+    color: #333;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.help-section {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+h2 {
+    color: #35424a;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer-button {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-bottom: 20px; /* Add margin to separate from footer text */
+}
+
+.back-to-dashboard {
+    padding: 10px 20px;
+    background-color: #3C91E6; /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 26px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-dashboard:hover {
+    background-color: #2a6fb0; /* Darker blue on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
